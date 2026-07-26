@@ -1,0 +1,7 @@
+langchain
+langchain-openai
+langgraph
+langgraph-checkpoint-sqlite
+langsmith
+requests
+python-dotenv

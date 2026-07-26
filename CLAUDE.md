@@ -49,3 +49,7 @@ a project's implementation:
   needs a provider that supports `tool_choice: "required"` — not every
   OpenAI-spec gateway/model does, debug with `OPENAI_LOG=debug` if a
   request with no other obvious issue 400s.
+- `langchain/04-persistent-memory-agent` — done. `create_agent` with
+  `SqliteSaver` checkpointer for cross-process conversation memory
+  (`thread_id`-keyed), reuses project 01's `get_top_yields` tool. Verified
+  persistence survives a full process restart, not just an in-loop test.
