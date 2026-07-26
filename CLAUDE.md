@@ -32,11 +32,15 @@ a project's implementation:
 - New projects get the next number in sequence within their framework
   folder (`langchain/02-...`, etc.).
 - Root `.gitignore` covers `.venv/`, `__pycache__/`, `.env`,
-  `.claude/settings.local.json` for all projects — don't add per-project
-  gitignores.
+  `.claude/settings.local.json` for all projects. A project only needs its
+  own `.gitignore` for project-specific generated/cloned data (e.g. a cloned
+  docs repo, a persisted vector store) that the root patterns don't cover.
 
 ## Current state
 
 - `langchain/01-defi-yield-agent` — done. LangChain `create_agent`
   tool-calling agent over the DeFiLlama yields API, LangSmith tracing
   wired, conversation-history cost bug found & fixed.
+- `langchain/02-defi-docs-rag` — done. RAG agent over Uniswap's docs
+  (Chroma + Ollama local embeddings + ChatOpenAI generation), grounded
+  answers with source citations.
