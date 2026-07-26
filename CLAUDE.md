@@ -44,3 +44,8 @@ a project's implementation:
 - `langchain/02-defi-docs-rag` — done. RAG agent over Uniswap's docs
   (Chroma + Ollama local embeddings + ChatOpenAI generation), grounded
   answers with source citations.
+- `langchain/03-yield-risk-classifier` — done. Forced structured output
+  (`response_format=ToolStrategy(...)`) over project 01's tool. Note: this
+  needs a provider that supports `tool_choice: "required"` — not every
+  OpenAI-spec gateway/model does, debug with `OPENAI_LOG=debug` if a
+  request with no other obvious issue 400s.
